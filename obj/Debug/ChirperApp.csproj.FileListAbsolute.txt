@@ -1,0 +1,12 @@
+D:\DualFolder\CODER-CAMP\JavaScript\David\ChirperApp\ChirperApp\bin\ChirperApp.dll.config
+D:\DualFolder\CODER-CAMP\JavaScript\David\ChirperApp\ChirperApp\bin\ChirperApp.dll
+D:\DualFolder\CODER-CAMP\JavaScript\David\ChirperApp\ChirperApp\bin\ChirperApp.pdb
+D:\DualFolder\CODER-CAMP\JavaScript\David\ChirperApp\ChirperApp\obj\Debug\ChirperApp.dll
+D:\DualFolder\CODER-CAMP\JavaScript\David\ChirperApp\ChirperApp\obj\Debug\ChirperApp.pdb
+D:\DualFolder\CODER-CAMP\JavaScript\David\ChirperApp\ChirperApp\obj\Debug\ChirperApp.csprojResolveAssemblyReference.cache
+D:\DualFolder\CODER_CAMP\JavaScript\David\ChirperApp\ChirperApp\bin\ChirperApp.dll.config
+D:\DualFolder\CODER_CAMP\JavaScript\David\ChirperApp\ChirperApp\bin\ChirperApp.dll
+D:\DualFolder\CODER_CAMP\JavaScript\David\ChirperApp\ChirperApp\bin\ChirperApp.pdb
+D:\DualFolder\CODER_CAMP\JavaScript\David\ChirperApp\ChirperApp\obj\Debug\ChirperApp.csprojResolveAssemblyReference.cache
+D:\DualFolder\CODER_CAMP\JavaScript\David\ChirperApp\ChirperApp\obj\Debug\ChirperApp.dll
+D:\DualFolder\CODER_CAMP\JavaScript\David\ChirperApp\ChirperApp\obj\Debug\ChirperApp.pdb

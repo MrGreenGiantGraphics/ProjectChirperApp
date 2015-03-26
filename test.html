@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>THE TEST PAGE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid _containerChirp">
+        <div class="row-fluid">
+            <div class="containerChirp-Profile">
+                <!-- tiny only nav-->
+                <ul class="nav hidden-xs" id="lg-menu">
+                    <li>
+                        <div class="row clearfix">
+                            <div class="logoChirp">
+                                <img class="img-thumbnail" alt="140x300" src=" img/sidebar-logo-chirp.png" />
+                            </div>
+                            <div><img class="img-thumbnail" alt="140x140" src=" img/GGGLogo.png" /></div>
+                        </div>
+                    </li>
+                    <!-- Logic for #ProfileModal line 32 HTML -->
+                    <h3 class="glyphicon">Profile</h3>
+                    <a class="glyphicon glyphicon-pencil" href="#" data-toggle="modal" data-target="#ProfileModal" onclick=" "></a>
+                    <li id="profile-handle">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-comment"></i>&nbsp;Handle
+                        </a>
+                    </li>
+                    <li id="profile-name">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-user">
+                            </i>&nbsp;Name
+                        </a>
+                    </li>
+                    <li id="profile-city">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-home">
+                            </i>&nbsp;City
+                        </a>
+                    </li>
+                </ul>
+                <!-- tiny only nav-->
+                <ul class="nav visible-xs" id="xs-menu">
+                    <li><a href="#"><i class="glyphicon glyphicon-comment"></i></a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-user"></i></a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
+                </ul>
+                <div class="containerChirp-Friend">
+                    <!-- tiny only nav-->
+                    <div class="row clearfix">
+                        <div class="row clearfix">
+                            <img class="img-thumbnail" alt="140x140" src=" img/sidebar-users-chirp.png" />
+                        </div>
+                        <h3 class="glyphicon">Friends</h3>
+                        <a class="glyphicon glyphicon-pencil" href="#" data-toggle="modal" data-target="#FriendModal"></a>
+                        <ul class="nav hidden-xs" id="lg-menu">
+                            <li>
+
+                    </div>
+                    </li>
+                    <!-- Logic for displaying FRIENDS line 91 HTML -->
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <div id="view-friends" class="list-group-item ">
+                                <p class="text-center">Handler</p>
+                                <p class="text-center">Name</p>
+                                <p class="text-center">City</p>
+                                <hr />
+                                <!--Delete Friend-->
+                                <a href="#"><i class="glyphicon glyphicon-trash"></i></a>
+                                <!-- End Delete Friend-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Friends DIV-->
+                </div>
+            </div>
+            <div class="containerChirp-Message">
+                <!-- tiny only nav-->
+                <div class="well">
+                    <!-- Logic for displaying CHIRPS line 74 HTML -->
+                    <form class="form-horizontal" role="form">
+                        <h4>Send Message!</h4>
+                        <div class="form-group" style="padding:14px;">
+                            <textarea onkeypress="onKeyPress(event)" id="chirp-input" class="form-control" placeholder="Update your status"></textarea>
+                        </div>
+                        <button onclick="createTweet()" class="btn btn-primary pull-right" type="button">Send Chirp!</button><ul class="list-inline"><li>
+                    </form>
+                </div>
+                <div class="containerChirp-Chirps">
+                    <!-- Logic for displaying FRIENDS line 91 HTML -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h4>Most Recent Chirps</h4><a href="#">Chirps<span class="badge" id="newChirps"></span></a></div>
+                        <!-- Display Chirps-->
+                        <div id="chirp-display" class="panel-body">
+                        </div>
+                        <!-- End Display Chirps-->
+                    </div>
+                    <!-- End Friends DIV-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Logic for Edit Area on PROFILE Modal line 136 HTML -->
+    <div id="ProfileModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Edit and Update Profile</h4>
+                </div>
+                <br />
+                <div class="modal-body">
+                    <div class="form-group column col-lg-12">
+                        <label for="handle-input">Handle</label>
+                        <input type="text" class="form-control" id="handle-input" placeholder="Username">
+                    </div>
+                    <div class="form-group column col-lg-12">
+                        <label for="user-input">Name</label>
+                        <input type="text" class="form-control" id="user-input" placeholder="Enter User Name">
+                    </div>
+                    <div class="form-group column col-lg-12">
+                        <label for="city-input">City</label>
+                        <input type="text" class="form-control" id="city-input" placeholder="Enter city">
+                    </div>
+                    <p class="text-center">Save changes</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="update-profile" data-dismiss="modal" type="button" class="btn btn-primary">Update</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!--Modal Fiends Profile-->
+    <div id="FriendModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Friends</h4>
+                </div>
+                <br />
+                <div class="modal-body">
+                    <div class="col-md-12 column">
+                        <img class="img-circle center-block" alt="140x140" src="img/user-edit-area.png" />
+                    </div>
+                    <div id="friendDiv">
+                        <p class="text-center" id="friend-handle"></p>
+                        <h5 class="text-center" id="friend-name"></h5>
+                        <h5 class="text-center" id="friend-city"></h5>
+                        <hr />
+                        <p id="modal-chirp" class="text-center">Add Friends</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" type="button" class="btn btn-primary">Close</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
+</body>
+</html>
